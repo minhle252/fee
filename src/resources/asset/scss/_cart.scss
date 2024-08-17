@@ -1,0 +1,75 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+.cart_title{
+    @include text_size($fs-large, $fw-6);
+    margin-bottom: $size-2;
+}
+.product_cart{
+    min-height: 50vh;
+    .card_item{
+        @include bordered(1px, $background_color);
+        background-color: $color_white;
+        padding: $size-2;
+        @include text_size($fs-primary, $fw-4);
+        &:first-child, &:last-child{
+            border-radius: 8px;
+        }
+        .box_price{
+            .product_price{
+                color: $color_red;
+                font-weight: 600;
+            }
+            .product_old_price{
+                    color: $color_gray;
+                    text-decoration: line-through;
+                    font-size: $fs-primary !important;
+                    font-weight: $fw-3 !important;
+            }
+        }
+        .product_details_info_counter{
+            display: flex;
+            .btn-counter{
+                border-radius: 4px;
+                height: 34px;
+                width: 34px;
+                background-color: $color_gray-50;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $fs_title;
+                &:hover{
+                    background-color: $color_gray;
+                }
+            }
+            input{
+                border: none;
+                text-align: center;
+                width: 34px;
+                outline: none;
+                @include text_size($fs-primary, $fw-5);
+            }
+    
+        }
+    }
+
+}
+.box_total{
+    .btn_add{
+        border-radius: 4px;
+        width: fit-content;
+        padding: $size-2 $size-3;
+        @include text_size($fs-primary, $fw-6);
+        @include bordered(1px, $color_gray);
+    }
+    .checkout{
+        @include bordered(1px, $color_blue);
+        @include background_color($color_blue, $color_white);
+    }
+    .total{
+        background-color: $color_white;
+        border-radius: 8px;
+        @include text_size($fs-primary, $fw-5);
+    }
+}

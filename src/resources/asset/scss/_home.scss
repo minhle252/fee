@@ -1,0 +1,187 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+// .banner{
+//     height: 351px;
+//     width: 100vw;
+//     background-image: url('/images/banner.webp');
+//     background-size: 100%;
+//     background-position: center;
+//     animation: zom_in 1.5s ease-in-out,;
+// }
+.swiper-slide img{
+    width: 100%;
+}
+.category_block{
+    .category_item{
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        align-items: end;
+        img{
+            border-radius: 8px;
+            width: 100%;
+            border: 1px solid $color_gray_50;
+        }
+        .box_content{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        h3 a{
+            font-size: $fs-title;
+            font-weight: $fw-7;
+        }
+        a {
+            color: $color_primary;
+            text-decoration: none;
+            outline: none;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            font-family: "Quicksand", sans-serif;
+            font-weight: $fw-1;
+            &:hover{
+                color: $shop_color_hover !important;
+            }
+        }
+    }
+}
+// service
+.box_service,.box_blog{
+    .service_item,.blog_item{
+        .box_img{
+            @include bordered(1px,$color_gray_50);
+            overflow: hidden;
+            border-radius: 8px;
+            img{
+                @include hover_trans(0.5s);
+            }
+        }
+        .box_content{
+            a{
+                @include text_size($fs-primary, $fw-6);
+                display: block;
+            }
+            span{
+                @include text_size($fs-primary, $fw-4);
+            }
+        }
+        &:hover {
+            .box_img img{
+                transform: scale(1.25);
+            }
+            .box_content a{
+                color: $shop_color_hover !important;
+            }
+        }
+    }
+}
+// BLOG
+.box_blog{
+    .blog_item{
+        .box_content{
+            .content_title{
+                @include webkit_box(2);
+            }
+            .content_des{
+                @include webkit_box(3);
+                @include text_size($fs-primary, $fw-4);
+            }
+        }
+        .article{
+            @include text_size($fs-primary, $fw-4);
+            .article-item{
+                margin: 5px;
+                margin-left: 0;
+                span{
+                    @include text_size($fs-min, $fw-5);
+                }
+            }
+        }
+    }
+}
+
+// 
+.tab_product_hot a{
+    @include text_size($fs-primary, $fw-5);
+    width: fit-content;
+    border-bottom: 1px solid $color_white;
+
+    &:hover{
+        border-bottom: 1px solid $color_primary;
+    }
+    &.active{
+        border-bottom: 1px solid $color_primary;
+    }
+}
+.banner-hover-effect{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    @include hover_trans(0.5s);
+    &::before{
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    &::after{
+        bottom: 0;
+        right: 0;
+        z-index: 2;
+    }
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 0;
+        background-color: rgba(255, 255, 255, 0.15);
+        @include hover_trans(0.5s);
+    }
+    &:hover::before,&:hover::after{
+        width: 100%;
+        height: 100%;
+    }
+    &:hover img {
+        @include tranform_scale(1.1);
+        @include hover_trans(0.5s);
+    }
+    .overlay_content{
+        position: absolute;
+        color: $color_main ;
+        bottom: 0;
+        text-align: center;
+        margin-bottom: 10px;
+        transform: translateY(45%);
+        @include hover_trans(0.5s);
+        h2{
+            @include text_size($fs-large, $fw-8);
+            text-shadow: -1px 0 #00000087, 0 1px #0000007d, 1px 0 #0000005e, 0 -1px #0000007d;
+        }
+        button{
+            opacity: 0;
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            @include text_size($fs-section-title, $fw-5);
+            @include background_color($color_main, $color_primary);
+            @include hover_trans(0.5s);
+        }
+    }
+    &:hover{
+        .overlay_content{
+            transform: translateY(0);
+            button{
+                opacity: 1;
+            }
+        }
+    }
+}

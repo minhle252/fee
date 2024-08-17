@@ -1,0 +1,132 @@
+.contact{
+    .title{
+        font-weight: bold;
+        color: rgb(41, 67, 78);
+        margin-bottom: 50px;
+    }
+    .row{
+        display: flex;
+        .supporter-block-wrapper{
+            margin-top: 10px;
+            .supporter-block{
+                transition: all 0.15s ease-in;
+                border-radius: 4px;
+                background-color: #F7F9FB;
+                padding: 60px;
+                position: relative;
+                cursor: pointer;
+                text-align: center;
+                .img-wrapper{
+                    margin-bottom: 60px;
+                }
+                .des{
+                    .des-title{
+                        line-height: 1.33;
+                        font-size: 16px;
+                        margin-top: 15px;
+                        font-weight: 600;
+                    }
+                    .des-text{
+                        margin-top: 10px;
+                        line-height: 1.43;
+                        font-size: 14px;
+                        margin-bottom: 0px;
+                    }
+                }
+                &:hover {
+                    box-shadow: 0 10px 20px 0 #E0E0E0;
+                }
+
+            }
+        }
+
+    }
+    .office{
+        .office-item{
+            .office-left{
+                .office-left-title{
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.33;
+                    margin-bottom: 20px;
+                }
+                .office-left-content{
+                    p{
+                        text-align: justify;
+                    }
+                }
+            }
+            .office-right{
+                .office-right-title{
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.33;
+                    margin-bottom: 20px;
+                }
+                .office-right-content{
+                    margin-top: 50px;
+
+                    p{
+                        text-align: justify;
+                    }
+                    .contact-item{
+                        display: flex;
+                        align-items: center;
+                        margin: 20px 0;
+                        p{
+                            margin: 0;
+                            margin-left: 20px;
+                        }
+                    }
+                    .phone-item{
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .email-form{
+        .form{
+            margin: 0 20%;
+            .divide{
+                border-top: solid 1px #e3e3e3;
+                padding-top: 20px;
+                margin-top: 50px;
+                font-style: italic;
+                font-size: 14px;
+                line-height: 20px;
+            }
+            .submit{
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                button{
+                    line-height: 46px;
+                    display: inline-block;
+                    border-radius: 4px;
+                    padding: 0 30px;
+                    background-color: #00524e;
+                    border: 1px solid #00524e;
+                    color: #FFF;
+                    text-align: center;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .active{
+        display: block;
+        .supporter-block{
+            &:after {
+                content: "\f078";
+                color: #aaa;
+                width: 20px;
+                height: 10px;
+                position: absolute;
+                bottom: 30px;
+                left: 50%;
+                font-family: FontAwesome;
+            }
+        }
+    }
+}

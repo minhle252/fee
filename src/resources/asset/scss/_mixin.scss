@@ -1,0 +1,58 @@
+@import 'variables';
+
+@mixin background_color($bg_color,$text_color) {
+    background-color: $bg_color !important;
+    color: $text_color !important;
+}
+@mixin text_size($fz,$fw){
+    font-size: $fz !important;
+    font-weight: $fw !important;
+}
+@mixin bordered($width, $color) {
+    border: $width solid $color;
+}
+@mixin hover_trans($second){
+    transition: all $second ease-out;
+    -webkit-transition: all $second ease-out ;
+    -ms-transition: all $second ease-out ;
+}
+@mixin tranform_scale($scale){
+    -moz-transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -o-transform: scale($scale);
+    -ms-transform: scale($scale);
+    transform: scale($scale);
+}
+@mixin webkit_box($row){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $row;
+}
+@mixin css_default{
+    margin: 0;
+    padding: 0;
+}
+@mixin margin_auto{
+    margin-left: auto;
+    margin-right: auto;
+}
+@mixin full_screen{
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+@mixin square($xy){
+    height: $xy;
+    width: $xy;
+    min-width: $xy;
+}
+@mixin center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

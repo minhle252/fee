@@ -1,0 +1,16 @@
+@keyframes zom_in{
+    from {
+        background-size: 125%;
+    }
+    to {
+        background-size: 100%;
+    }
+}
+@keyframes FadeIn {
+    0% {
+        max-height: 0;
+    }
+    100% {
+        max-height: 500px; /* Đặt chiều cao tối đa của popup */
+    }
+}

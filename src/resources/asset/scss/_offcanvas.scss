@@ -1,0 +1,59 @@
+.offcanvas{
+    height: 100%;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    .offcanvas-body{
+        overflow: auto;
+        .product_details_info_counter{
+            display: flex;
+            .btn-counter{
+                border-radius: 4px;
+                height: 34px;
+                width: 34px;
+                background-color: $color_gray-50;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: $fs_title;
+                &:hover{
+                    background-color: $color_gray;
+                }
+            }
+            input{
+                border: none;
+                text-align: center;
+                width: 34px;
+                outline: none;
+                @include text_size($fs-primary, $fw-5);
+            }
+    
+        }
+    }
+    .offcanvas-footer{
+        background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        a{
+
+            background-color: rgb(254, 44, 109);
+            color: white!important;
+            width: 90%;
+            font-weight: bold;
+        }
+        .subtotal-wrapper{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin-bottom: 10px;
+            .subtotal-text{
+                color: rgb(254, 44, 109);
+                font-size: 20px;
+            }
+        }
+    }
+}

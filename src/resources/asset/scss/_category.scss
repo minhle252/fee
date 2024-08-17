@@ -1,0 +1,209 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+.category{
+    display: flex;
+    .sidebar{
+        flex: 1;
+        height: fit-content;
+        position: sticky;
+        top: 0;
+        .title{
+            position: relative;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 5px;
+            h2{
+                width: auto;
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 40px;
+                color: rgb(0, 2, 4);
+                white-space: nowrap;
+            }
+        }
+        .list{
+            .item{
+                a{
+                    color: rgb(77, 78, 79);
+                    font-size: 14px;
+                    font-weight: 600;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    .content{
+        position: relative;
+        flex: 3;
+        .title{
+            position: relative;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 5px;
+            h2{
+                width: auto;
+                display: inline-block;
+                font-weight: 300;
+                line-height: 40px;
+                color: rgb(0, 2, 4);
+                white-space: nowrap;
+            }
+        }
+        .filter{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            padding: 0 26px;
+            border: 1px solid #e8e8e9;
+            border-radius: 8px;
+            .filter-item{
+                cursor: pointer;
+                .heading{
+                    strong{
+                        font-weight: 600;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: #202020;
+                        text-transform: uppercase;
+                        margin-bottom: 2px;
+                    }
+                    i{
+                        width: 12px;
+                    }
+                }
+                p{
+                    color: #202020;
+                    font-size: 13px;
+                    line-height: 20px;
+                    font-weight: 300;
+                }
+            }
+
+        }
+        .popup-price{
+            position: absolute;
+            width: max-content;
+            float: left;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px #00000033;
+            overflow: hidden;
+            animation: FadeIn 0.5s linear;
+            z-index: 999;
+            display: none;
+            .input-range{
+                width: 140px;
+                border: 1px solid rgb(198, 206, 213);
+                outline: none;
+                box-shadow: none;
+                height: 40px;
+                line-height: 30px;
+                font-size: 14px;
+                color: rgb(0, 2, 4);
+                background: rgb(255, 255, 255);
+                white-space: nowrap;
+                max-width: 100%;
+                overflow: hidden;
+                margin: 0px;
+                border-radius: 8px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+            }
+            .input-radio-list{
+                .input-radio-item{
+                    margin-top: 10px;
+                    font-size: 100%;
+                    vertical-align: baseline;
+                    background: transparent;
+                    font-weight: 400;
+                    input{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+                    span{
+                        font-weight: 300;
+                        font-size: 14px;
+                        line-height: 34px;
+                        color: #202020;
+                    }
+                }
+            }
+            .button-wrapper{
+                padding-top: 25px;
+                border-top: 1px solid #e4e4ea;
+                display: flex;
+                justify-content: space-between;
+                button{
+                    width: 50%;
+                    height: 44px;
+                    line-height: 44px;
+                    border: none;
+                    border-radius: 10px;
+                    transition: all 0.25s;
+                    &:hover{
+                        box-shadow: 0 3px 8px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.2);
+                    }
+                }
+                .filter-btn{
+                    padding: 0px 20px;
+                    background-color: rgb(0, 2, 4);
+                    color: rgb(255, 255, 255);
+                    margin: 0px 16px 0px 0px;
+                }
+                .cancel-btn{
+                    padding: 0px 20px;
+                    background-color: rgb(255, 255, 255);
+                    color: rgb(46, 62, 78);
+                    margin: 0px;
+                }
+            }
+        }
+        .popup-arrange{
+            position: absolute;
+            right: 0;
+            width: max-content;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px #00000033;
+            overflow: hidden;
+            animation: FadeIn 0.5s linear;
+            z-index: 999;
+            display: none;
+            .arrange-item{
+                cursor: pointer;
+                .active{
+                    width: 30px;
+                }
+            }
+        }
+        .popup-pageSize{
+            position: absolute;
+            right: 0;
+            width: max-content;
+            border: 1px solid #e8e8e8;
+            border-radius: 8px;
+            box-shadow: 0 2px 20px #00000033;
+            overflow: hidden;
+            animation: FadeIn 0.5s linear;
+            z-index: 999;
+            display: none;
+            .pageSize-item{
+                cursor: pointer;
+                .active{
+                    width: 30px;
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+footer{
+    background-image: url('https://theme.hstatic.net/200000456167/1000910740/14/ft_bg_img.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: $color_white;
+    .background_overlay{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: #00000033;
+        z-index: 0;
+    }
+    .box_footer{
+        position: relative;
+        z-index: 1;
+        h3{
+            font-family: math;
+            font-size: $fs-section-title ;
+        }
+        
+        span, a{
+            @include text_size($fs-primary, $fw-4);
+            color: $color_white !important;
+            // @include webkit_box(2);
+            // word-break: break-all;
+            display: block;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                display: -webkit-box;
+                -webkit-line-clamp: 1;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                list-style-type: none;
+                &.flexsocial{
+                    a{
+                        display: flex !important;
+                        align-items: center;
+                        img{
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .logo{
+            text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    footer{
+        .box_footer{
+            .logo{
+                img{
+                    width: 200px;
+                }
+            }
+        }
+    }
+}

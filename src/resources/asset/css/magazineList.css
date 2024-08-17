@@ -1,0 +1,83 @@
+@charset "UTF-8";
+@keyframes zom_in {
+  from {
+    background-size: 125%; }
+  to {
+    background-size: 100%; } }
+
+@keyframes FadeIn {
+  0% {
+    max-height: 0; }
+  100% {
+    max-height: 500px;
+    /* Đặt chiều cao tối đa của popup */ } }
+
+.magazine-list .hot-news a {
+  margin-top: 50px;
+  position: relative; }
+  .magazine-list .hot-news a img {
+    position: relative;
+    border-radius: 10px 10px 0 0; }
+  .magazine-list .hot-news a .main-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+    border-radius: 0 0 10px 10px; }
+    .magazine-list .hot-news a .main-content h2 {
+      width: 70%;
+      line-height: 50px;
+      font-weight: 600; }
+    .magazine-list .hot-news a .main-content .info-magazine {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center; }
+      .magazine-list .hot-news a .main-content .info-magazine .category {
+        margin-right: 20px; }
+      .magazine-list .hot-news a .main-content .info-magazine i {
+        font-size: 16px;
+        color: white; }
+      .magazine-list .hot-news a .main-content .info-magazine span {
+        height: 30px;
+        line-height: 30px;
+        font-size: 16px;
+        color: white;
+        font-weight: 300; }
+
+.magazine-list .list {
+  margin-top: 50px; }
+  .magazine-list .list .item a img {
+    border-radius: 10px;
+    width: 100vw;
+    max-height: 280px;
+    object-fit: contain; }
+  .magazine-list .list .item a p {
+    color: #202020;
+    white-space: pre-wrap;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    max-height: 52px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-bottom: 5px; }
+  .magazine-list .list .item a .info-magazine {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; }
+    .magazine-list .list .item a .info-magazine .category {
+      margin-right: 10px; }
+    .magazine-list .list .item a .info-magazine i {
+      font-size: 12px;
+      color: #8a8d90; }
+    .magazine-list .list .item a .info-magazine span {
+      font-size: 12px;
+      color: #8a8d90;
+      font-weight: 300; }

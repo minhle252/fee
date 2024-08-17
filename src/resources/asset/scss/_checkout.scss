@@ -1,0 +1,141 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+.product_checkout{
+    .modal{
+        .form-item{
+            input, select{
+                width: 100%;
+                font-weight: 300;
+                font-size: 14px;
+                color: #202020;
+                padding: 8px 0 5px;
+                border: none;
+                &:focus {
+                    outline: none;
+                }
+            }
+            .divide{
+                border-bottom: 0.96px solid #e4e4ea;
+            }
+            button{
+                height: 44px;
+                line-height: 44px;
+                padding: 0px 20px;
+                background-color: #3e4048;
+                color: #fff;
+                border-radius: 8px;
+                margin-top: 13px;
+                margin-bottom: 13px;
+                border: none;
+            }
+        }
+    }
+    .block_cart{
+        padding: $size-3;
+        padding-top: 0;
+        margin-top: $size-3;
+        border-radius: 4px;
+        @include text_size($fs-primary,$fw-5);
+        @include background_color($color_white, $color_primary);
+        .title{
+            text-transform: uppercase;
+            @include css_default;
+            padding-top: $size-3;
+            padding-bottom: $size-1;
+            position: relative;
+            .img{
+                width: 20px;
+                height: 20px;
+            }
+            .btn_change_info{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                margin-right: $size-1;
+                margin-bottom: 4px;
+                text-transform: initial;
+                color: $color_gray !important;
+                @include text_size($fs-min,$fw-6);
+            }
+        }
+        .info_user{
+            padding-left: 24px;
+            span{
+                @include text_size($fs-primary,$fw-6);
+                &.text_default{
+                    @include text_size($fs-min, $fw-7);
+                    padding: $size-1 $size-2;
+                    border-radius: 4px;
+                    @include background_color($color_blue_e5f2fb, $color_blue)
+                }
+            }
+        }
+        .address{
+            @extend .info_user;
+        }
+        .input-new-address{
+            text-align: center;
+            border: 1px dashed #dbdcdd;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .list_Product_cart{
+            height: 200px;
+            overflow-y: auto;
+            padding-right: 12px;
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: $color_gray; 
+                border-radius: 2px;
+            }
+            &::-webkit-scrollbar-track {
+                background: $color_gray-50; 
+            }
+            .box_content{
+                @include text_size($fs-primary, $fw-4);
+                .product_name{
+                    @include webkit_box(1);
+                }
+                .price{
+                    @include text_size($fs-primary, $fw-6);
+                }
+                .color{
+                    width: 100px;
+                }
+            }
+        }
+        .box_delivery{
+            width: 100%;
+            padding-left: 35px;
+            .wrap_dilivery{
+                cursor: pointer;
+                @include text_size($fs-primary, $fw-4);
+                border: 1px solid #1887db;
+                border-radius: 8px;
+                padding: $size-3 $size-1;
+                input{
+                    cursor: pointer;
+                }
+                .dilivery_title{
+                    @include text_size($fs-primary, $fw-7);
+                }
+                .text_default{
+                    padding: $size-1 $size-2;
+                    border-radius: 4px;
+                    @include text_size($fs-primary, $fw-7);
+                    @include background_color($color_blue_e5f2fb, $color_blue)
+                }
+            }
+        }
+        .qr-wrapper{
+            display: none;
+            .img-payment{
+                width: 300px;
+            }
+        }
+    }
+}

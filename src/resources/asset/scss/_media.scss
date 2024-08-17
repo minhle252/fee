@@ -1,0 +1,56 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+@media only screen and (max-width: 767px) {
+    .hd-btnMenu{
+        position: absolute;
+        left: 0;
+        .icon_menu{
+        
+        }
+        .nav_bars{
+            position: fixed;
+            background: #ffd596;
+            height: 100vh;
+            width: 50vw;
+            left: 0;
+            flex-direction: column;
+            padding: 25px 15px;
+            transform: translateX(-100vw);
+            @include hover_trans(0.5s);
+            .background_ovelay{
+                position: absolute;
+                // background: $color_overlay1;
+                width: 50vw;
+                height: 100vh;
+                right: -50vw;
+                top: 0;
+                opacity: 0;
+                transition: all 0.5s 0.5s ease-out;
+            }
+            &.active{
+                transform: translateX(0);
+                .background_ovelay{
+                    opacity: 1;
+                }
+            }
+            li{
+                padding: 10px 0;
+                border-top:1px solid $color_primary;
+                &:last-child{
+                    border-bottom:1px solid $color_primary;
+                }
+                &:hover{
+                    background-color: $background_color;
+                    @include hover_trans(0.5s);
+                    a{
+                        color: $shop_color_hover !important;
+                        font-weight: $fw-6;
+                        @include hover_trans(0.5s);
+                    }
+                }
+            }
+        }
+    }
+}

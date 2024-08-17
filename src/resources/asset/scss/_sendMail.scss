@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframe';
+
+.send-mail{
+    margin: 15% auto!important;
+    .success{
+        background-color: white;
+        padding: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 15px;
+        i{
+            font-size: 40px;
+            color: green;
+        }
+        p{
+            margin: 0;
+            margin-top: 20px;
+            font-weight: 600;
+        }
+    }
+}
