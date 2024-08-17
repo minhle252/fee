@@ -291,39 +291,36 @@ class ProductController {
                     </p>
                     </td>
                     <td
-                    width="164"
+                    width="153"
                     valign="top"
-                    style="width:123.2pt;border-style:none solid solid none;border-width:medium 1pt 1pt medium;padding:0cm 5.4pt;height:24.15pt;font-family:sans-serif"
+                    style="width:115.1pt;border-style:none solid solid none;border-width:medium 1pt 1pt medium;padding:0cm 5.4pt;height:24.15pt;font-family:sans-serif"
                     >
                     <p
-                        style="margin:0cm 0cm 0.0001pt;line-height:normal;font-size:11pt;font-family:calibri,sans-serif"
+                        align="center"
+                        style="margin:7.5pt 0cm 10pt;text-align:center;line-height:normal;font-size:11pt;font-family:calibri,sans-serif"
                     >
                         <b style="font-family:calibri,sans-serif">
                         <i style="font-family:calibri,sans-serif">
-                            <span style="font-family:times new roman,serif;color:rgb(68,114,196)">${item.discount1}</span>
+                            <span style="font-size:12pt;font-family:times new roman,serif;color:rgb(68,114,196)">${item.discount1}</span>
                         </i>
-                        </b>
-                        <b style="font-family:calibri,sans-serif">
-                        <span style="font-family:calibri,sans-serif;color:rgb(68,114,196)">
-                        </span>
                         </b>
                     </p>
                     </td>
                     <td
-                    width="164"
+                    width="153"
                     valign="top"
-                    style="text-align:center;width:123.2pt;border-style:none solid solid none;border-width:medium 1pt 1pt medium;padding:0cm 5.4pt;height:24.15pt;font-family:sans-serif"
+                    style="width:115.1pt;border-style:none solid solid none;border-width:medium 1pt 1pt medium;padding:0cm 5.4pt;height:24.15pt;font-family:sans-serif"
                     >
-                    <font
-                        face="times new roman, serif"
-                        style="font-family:times new roman,serif;color:rgb(68,114,196)"
+                    <p
+                        align="center"
+                        style="margin:7.5pt 0cm 10pt;text-align:center;line-height:normal;font-size:11pt;font-family:calibri,sans-serif"
                     >
-                        <span style="font-size:16px;font-family:times new roman,serif">
-                        <b style="font-family:times new roman,serif">
-                            <i style="font-family:times new roman,serif">${item.discount2}</i>
+                        <b style="font-family:calibri,sans-serif">
+                        <i style="font-family:calibri,sans-serif">
+                            <span style="font-size:12pt;font-family:times new roman,serif;color:rgb(68,114,196)">${item.discount2}</span>
+                        </i>
                         </b>
-                        </span>
-                    </font>
+                    </p>
                     </td>
                     <td
                     width="153"
@@ -364,11 +361,14 @@ class ProductController {
                     >
                     <p
                         align="center"
-                        style="margin:0cm 0cm 10pt;text-align:center;line-height:12.65pt;font-size:11pt;font-family:calibri,sans-serif"
+                        style="margin:0cm 0cm 10pt;text-align:center;line-height:12.65pt;font-size:11pt;font-family:sans-serif"
                     >
-                        <b style="font-family:calibri,sans-serif">
-                        <span style="font-family:times new roman,serif;color:red">${item.total1}</span>
-                        </b>
+                        <font
+                        face="times new roman, serif"
+                        style="font-family:times new roman,serif;color:rgb(255,0,0)"
+                        >
+                        <b style="font-family:times new roman,serif">${item.total1}</b>
+                        </font>
                     </p>
                     <p
                         align="center"
@@ -436,7 +436,7 @@ class ProductController {
                 <br />
             <div dir="auto" style="font-family:sans-serif;font-size:12.8px">
                 <img
-                src="${process.env.URL_IMAGE}${item.network}.jpg"
+                src="${process.env.URL_IMAGE}${item.network.toUpperCase()}.png"
                 alt="vt.png"
                 style="width:338px;max-width:100%"
                 data-image-whitelisted=""
