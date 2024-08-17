@@ -30,7 +30,7 @@ class ProductController {
           item.discount2 = item.discount2.toLocaleString("vi");
           item.discount3 = item.discount3.toLocaleString("vi");
           await transporter.sendMail({
-            from: `"Hồ Xuân" <${email}>`, // sender address
+            from: `"${process.env.NAME}" <${email}>`, // sender address
             to: item.email, // list of receivers
             subject: `CHỨNG THƯ SỐ ĐẾN KỲ GIA HẠN LẠI !`, // Subject line
             html: `
@@ -40,9 +40,7 @@ class ProductController {
                 style="margin:7.5pt 0cm 10pt;text-align:center;line-height:normal;background-image:none;font-size:11pt;font-family:calibri,sans-serif;background-position:0% 0%;background-repeat:repeat repeat"
             >
                 <b style="font-family:calibri,sans-serif">
-                <span style="font-family:&quot;times new roman&quot;,serif;color:rgb(74,69,42)">V/v:Hết<span
-                    style="font-family:times new roman,serif"
-                    >hạn</span>hợp đồng ${item.network}</span>
+                <span style="font-family:&quot;times new roman&quot;,serif;color:rgb(74,69,42)">V/v: Hết hạn hợp đồng ${item.network}</span>
                 </b>
             </p>
             <p style="margin:0cm 0cm 8pt;line-height:16.7919px">
@@ -56,14 +54,14 @@ class ProductController {
                     </font>
                 </span>
                 </u>
-                <span style="font-family:Calibri,Arial;font-size:14pt;background-color:rgb(255,153,0)">
+                <span style="font-family:Calibri,Arial;font-size:14pt;">
                 ${item.company}
                 </span>
             </p>
             <p style="margin:0cm 0cm 8pt;line-height:16.7919px">
                 <span style="font-family:Calibri,Arial;font-size:11pt;text-align:right;color:rgb(0,0,0)">MST :</span>
                 <span
-                style="font-family:Calibri,Arial;font-size:14pt;text-align:right;background-color:rgb(255,153,0)"
+                style="font-family:Calibri,Arial;font-size:14pt;text-align:right;"
                 >${item.tax}</span>
             </p>
             <p
@@ -79,7 +77,7 @@ class ProductController {
                 <span style="font-size:7pt;font-family:times new roman,serif;color:rgb(89,89,89)"></span>
                 <span style="font-family:&quot;times new roman&quot;,serif;color:rgb(89,89,89)">
                 <span style="font-family:&quot;times new roman&quot;,serif">Chứng thư có hạn đến
-                    <span style="background-color:rgb(255,153,0)">${item.end_date}</span>
+                    ${item.end_date}
                     đến chu kỳ gia hạn lại .
                 </span>
                 </span>
@@ -430,16 +428,15 @@ class ProductController {
                 doanh để tiến hành thủ tục gia hạn theo số điện thoại
                 <b style="font-family:calibri,sans-serif">
                 <span style="font-size:14pt;font-family:times new roman,serif;color:rgb(0,112,192)">: 0901 197
-                    180 Mrs XUÂN</span>
+                    180 Mrs ${process.env.NAME.toUpperCase()}</span>
                 hoặc gửi lại email thông báo gia hạn có kèm thông tin của người liên hệ
                 </b>
             </p>
-
                 <br />
                 <br />
             <div dir="auto" style="font-family:sans-serif;font-size:12.8px">
                 <img
-                src="https://mail.google.com/mail/u/0?ui=2&amp;ik=f0b3627df5&amp;attid=0.1&amp;permmsgid=msg-f:1807517162685467672&amp;th=19159748674a0c18&amp;view=fimg&amp;fur=ip&amp;sz=s0-l75-ft&amp;attbid=ANGjdJ-TeGmJVXwT6cZbttc4TFWdWu7tr7Km2F68B-gGGZTnhAUFZ1FCrZcFBi-Psb3sbdlzyDhNB4b1QueoOBwvZNOqRc3W_DdUIvwzAVWbcsk_x3FrgdO3yBpCgWo&amp;disp=emb&amp;realattid=ii_kfhzjg510"
+                src="${process.env.URL_IMAGE}${item.network}.jpg"
                 alt="vt.png"
                 style="width:338px;max-width:100%"
                 data-image-whitelisted=""
@@ -474,12 +471,12 @@ class ProductController {
             <p style="margin:0cm 0cm 8pt;line-height:16.7919px;font-size:11pt;font-family:calibri,sans-serif">
                 <span
                 style="font-family:arial,sans-serif;background-image:none;color:rgb(136,136,136);background-position:0% 0%;background-repeat:repeat repeat"
-                >PHÒNG<span style="font-family:arial,sans-serif">CHỨNG</span>THỰC GIAO DỊCH ĐIỆN TỬ</span>
+                >PHÒNG CHỨNG THỰC GIAO DỊCH ĐIỆN TỬ</span>
             </p>
             <p style="margin:0cm 0cm 8pt;line-height:16.7919px;font-size:11pt;font-family:calibri,sans-serif">
                 <span
                 style="font-family:arial,sans-serif;background-image:none;color:rgb(136,136,136);background-position:0% 0%;background-repeat:repeat repeat"
-                >SĐT : 0901 197 180</span>
+                >SĐT : ${process.env.PHONE}</span>
             </p>
             <p style="margin:0cm 0cm 8pt;line-height:16.7919px;font-size:11pt;font-family:calibri,sans-serif">
                 <span
