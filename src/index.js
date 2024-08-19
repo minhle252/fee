@@ -16,8 +16,8 @@ const urlConfig = process.env.URL_CONFIG;
 const helpers = require("./app/utils/helpers");
 require("dotenv").config();
 // app.use(upload.array()); 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.json({limit: '50mb'}));
+app.use(express.urlencoded({ extended: true, limit: '50mb'}));
 const PORT = process.env.PORT || 5000;
 
 app.use(cookieParser());
